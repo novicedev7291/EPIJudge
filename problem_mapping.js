@@ -65,14 +65,14 @@ problem_mapping = {
                 "passed": 0,
                 "total": 10000
             },
-            "Python: closest_int_same_weight.py": { 
+            "Python: closest_int_same_weight.py": {
                 "passed": 0,
                 "total": 10000
             }
         },
         "4.05 Compute product without arithmetical operators": {
             "C++: primitive_multiply.cc": {
-                "passed": 0,
+                "passed": 10006,
                 "total": 10006
             },
             "Java: PrimitiveMultiply.java": {
