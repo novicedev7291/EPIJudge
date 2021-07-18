@@ -4,7 +4,7 @@ long long Reverse(int x) {
 
   while(x) {
     ans = ans * 10 + x % 10;
-    x /= x;
+    x /= 10;
   }
   return ans;
 }
