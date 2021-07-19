@@ -6,7 +6,7 @@ unsigned long long add(unsigned long long a, unsigned long long b) {
     a ^= b;
     b = carry << 1;
   }
-  return 0;
+  return a;
 }
 
 unsigned long long Multiply(unsigned long long x, unsigned long long y) {
