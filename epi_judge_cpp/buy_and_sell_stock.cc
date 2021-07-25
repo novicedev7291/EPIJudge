@@ -2,9 +2,21 @@
 
 #include "test_framework/generic_test.h"
 using std::vector;
+using std::max;
+
 double BuyAndSellStockOnce(const vector<double>& prices) {
-  // TODO - you fill in here.
-  return 0.0;
+  double max_profit = 0.0, b_day = 0;
+
+  for(int i = 1; i < prices.size(); i++) {
+    double profit = prices[i] - prices[b_day];
+    if(profit < 0.0) {
+      b_day = i;
+    }else {
+      max_profit = max(profit, max_profit);
+    }
+  }
+
+  return max_profit;
 }
 
 int main(int argc, char* argv[]) {
