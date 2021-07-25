@@ -6,8 +6,16 @@
 #include "test_framework/test_failure.h"
 #include "test_framework/timed_executor.h"
 using std::vector;
+using std::swap;
+
 void Rearrange(vector<int>* A_ptr) {
-  // TODO - you fill in here.
+  vector<int>& A = *A_ptr;
+
+  for(int i = 1; i < A.size(); i++) {
+    if((!(i % 2) && A[i - 1] < A[i]) || ((i % 2) && A[i - 1] > A[i])) 
+      swap(A[i - 1], A[i]);
+  }
+
   return;
 }
 void CheckAnswer(const vector<int>& A) {
